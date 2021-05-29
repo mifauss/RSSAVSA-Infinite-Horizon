@@ -85,8 +85,10 @@ function percent_change_newdesign_vs_baseline = compare_designs( ...
 
         for l_index = 1 : nl % for each alpha want to show contours for all designs on one plot
 
-            set(gcf,'color','w');
-            subplot(1, nl, l_index);
+            if plot_results
+                set(gcf,'color','w');
+                subplot(1, nl, l_index);
+            end
 
             for i = 1 : N_DESIGNS
 
