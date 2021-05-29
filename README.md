@@ -76,4 +76,4 @@ Plot_Disturbance_Profile('WRSA0')
 
 | Table  | Command             | Computational Prerequisites         |
 |--------|---------------------|-------------------------------------|
-| 4      | Generate_Figure(4); | Run_All_Designs();                  |
+| 4      | Generate_Table(4); | Run_All_Designs();                  |
