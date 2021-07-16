@@ -11,11 +11,12 @@ function config = get_config(configId)
 
     config = []; 
     config.id = mat2str(configId);
+    n_iter = 60;
 
     % configure for water system
-    config.grid_spacing = 1/10;        % [ft] state discretization interval
-    config.dt = 180;                   % Duration of [k, k+1) [sec], 5min = 300sec, 3min = 180sec
-    config.T = 3600 * 1;               % Design storm length [sec], 1h = 1h*3600sec/h
+    config.grid_spacing = 1/2;         % [ft] state discretization interval (default = 1/10)
+    config.dt = 300;                   % Duration of [k, k+1) [sec], 5min = 300sec, 3min = 180sec
+    config.T = n_iter*config.dt;       % Design storm length [sec], 1h = 1h*3600sec/h
     config.grid_upper_buffer = 2;      % [ft]
     config.grid_lower_buffer = 0;      % [ft]
     config.m = configId;               % this is gamma in softmax
