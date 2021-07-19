@@ -17,7 +17,10 @@ function[] = write_log_end_stage(staging_area, k)
     disp(stage_complete_time); 
     
     % write to log file
-    fid = fopen(strcat([staging_area,'/','Bellman_times.txt']),'a+');
+    slash = '/';
+    if (ispc); slash = '\'; end 
+    %fid = fopen(strcat([staging_area,'/','Bellman_times.txt']),'a+');
+    fid = fopen(strcat([staging_area,slash,'Bellman_times.txt']),'a+');
     fprintf(fid, '\n');
     fprintf(fid, strcat(['Stage ', num2str(k), ' complete:']));
     fprintf(fid, '\n');
