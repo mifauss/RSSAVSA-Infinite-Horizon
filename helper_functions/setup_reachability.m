@@ -25,8 +25,10 @@ function[Js, mus, N] = setup_reachability(scenarioID, configurationID)
 
     display(strcat('Running scenario: (', scenarioID, ') under simulator configuration (',num2str(configurationID) ,').'))
 
-    N = config.T/config.dt;         % Time horizon: {0, 1, 2, ..., N} = {0, 5min, 10min, ..., 240min} = {0, 300sec, 600sec, ..., 14400sec}
+    %N = config.T/config.dt;         % Time horizon: {0, 1, 2, ..., N} = {0, 5min, 10min, ..., 240min} = {0, 300sec, 600sec, ..., 14400sec}
 
+    N = scenario.exptNiter;
+    
     Js = cell( N+1, 1 );            % Contains optimal value functions to be solved via dynamic programming
                                     % Js{1} is J0, Js{2} is J1, ..., Js{N+1} is JN
 

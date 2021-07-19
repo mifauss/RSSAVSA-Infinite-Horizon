@@ -32,10 +32,12 @@ function scenario = fill_scenario_fields_watersys_baseline(scenarioId)
     scenario.K_min = zeros(2,1);
     scenario.K_max = scenario.combined_sewer_outlet_elevation';
     
-    [scenario.ws, scenario.P, scenario.nw, scenario.wunits] = get_runoff_disturbance_profile('right skew');
+    %[scenario.ws, scenario.P, scenario.nw, scenario.wunits] = get_runoff_disturbance_profile('right skew');
+    [scenario.ws, scenario.P, scenario.nw, scenario.wunits] = get_runoff_disturbance_profile_almostdet();
     
     scenario.cost_function = str2func('max_flood_level');
     
-    scenario.allowable_controls = 0: 0.1: 1; % this is reset for pump case
+    %scenario.allowable_controls = 0: 0.1: 1; % this is reset for pump case
+    scenario.allowable_controls = 0: 0.3: 1;
      
 end
