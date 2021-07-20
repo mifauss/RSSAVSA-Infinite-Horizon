@@ -19,20 +19,20 @@ scenarioID = 'WRSA0';
 % This provides contours of safe sets
 Plot_Infinte_Horizon_Figure3(scenarioID);
 
-%% Run similar to what's below if code breaks at a particular s_index
+% Run similar to what's below if code breaks at a particular s_index
 
-for s_index = 4 : length(mys_values)
+%for s_index = 4 : length(mys_values)
             
-        s = mys_values(s_index);
+%        s = mys_values(s_index);
         
-        configID = (s+1)*10; % Configurations, must be integers
+%        configID = (s+1)*10; % Configurations, must be integers
 
         % run inner-optimizations for exact method
-        Run_Bellman_Recursion(scenarioID, configID);
+%        Run_Bellman_Recursion(scenarioID, configID);
             
-end
+%end
 
-%% Notes from old experiments
+% Notes from old experiments
 
 % Older version: Plot_Infinte_Horizon_Figure2(j,N)
 
