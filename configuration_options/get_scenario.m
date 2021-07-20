@@ -22,7 +22,6 @@ function scenario = get_scenario(scenarioID)
             scenario.design = 'Baseline';
             [scenario.ws, scenario.P, scenario.nw, scenario.wunits] = get_runoff_disturbance_profile_majorrs('major right skew');
             scenario.ws = scenario.ws/2; % so mean is about 2 cfs
-            scenario.allowable_controls = 0: 0.3: 1;
         
         % augmented state with random cost sup( gK(X_t) ), BASELINE DESIGN,
         % N = 60   

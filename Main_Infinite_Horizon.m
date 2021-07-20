@@ -4,7 +4,7 @@ close all; clearvars; clc;
 alpha = 0.05;
     
 % s values of concern on the cluster, we want this to be 0 : 0.1 : 2
-mys_values = 0: 0.2: 2;
+mys_values = 0: 0.1: 2;
 
 % scenarioID is defined in Configuration Options/get_scenario
 % Scenario ID for state augmentation method with random cost max( gK(X_t) ) 
