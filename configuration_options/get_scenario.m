@@ -15,13 +15,13 @@ function scenario = get_scenario(scenarioID)
     switch scenarioID
                   
         % augmented state with random cost sup( gK(X_t) ), BASELINE DESIGN,
-        % N = 30
         case 'WRSA0'          
             scenario.AUG_STATE = 1;
             scenario.dynamics = str2func('bidirectional_flow_by_gravity_with_cso'); 
-            scenario.exptNiter = 30;
+            scenario.exptNiter = 200;
             scenario.design = 'Baseline';
-            [scenario.ws, scenario.P, scenario.nw, scenario.wunits] = get_runoff_disturbance_profile_almostdet();
+            [scenario.ws, scenario.P, scenario.nw, scenario.wunits] = get_runoff_disturbance_profile_majorrs('major right skew');
+            scenario.ws = scenario.ws/2; % so mean is about 2 cfs
             scenario.allowable_controls = 0: 0.3: 1;
         
         % augmented state with random cost sup( gK(X_t) ), BASELINE DESIGN,

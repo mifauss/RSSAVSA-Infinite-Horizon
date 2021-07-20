@@ -10,7 +10,7 @@ mys_values = 0: 0.2: 2;
 % Scenario ID for state augmentation method with random cost max( gK(X_t) ) 
 % We define different scenarios by changing N.
 % N is changed in set_up_reachability.m
-scenarioID = 'WRSA3';   
+scenarioID = 'WRSA0';   
 
 % V_alpha{1} is numerical estimate of inf CVaR( sup_{t = 0,1,...} g_K( X_t ) ) for
 % particular alpha value and a particular initial state
