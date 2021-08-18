@@ -1,5 +1,5 @@
 # Overview
-This is a Matlab Project based on the Paper CVaR-based Safety Analysis for the Infinite Time Setting (link here). 
+Analysis code to generate figures and artifacts presented in Chapman, et al., “CVaR-based Safety Analysis for the Infinite Time Setting” submitted to 
 
 # Introduction
 
