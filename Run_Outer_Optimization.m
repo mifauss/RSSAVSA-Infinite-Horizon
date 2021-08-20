@@ -163,6 +163,22 @@ function[V_alphas, real_coordinates] = Run_Outer_Optimization(scenarioID, start_
         V_alphas{i} = V_for_alpha;
 
     end
+    Nnumber = 0;
+    switch scenarioID
+        case 'WRSA0'          
+            Nnumber = 200;
+        case 'WRSA1'          
+            Nnumber = 250;
+        case 'WRSA2'          
+            Nnumber = 280;
+        case 'WRSA3'          
+            Nnumber = 300;
+       case 'WRSA4'              
+           Nnumber = 400;
+    end
+    Nstring = num2str(Nnumber);
+    namestringg = strcat('staging/outer_optimization_',scenarioID,'_N=',Nstring,'_alpha=',num2str(alphas),'.mat');
+    save(namestringg);
 end
 
 
