@@ -1,5 +1,6 @@
 # Overview
-Analysis code to generate the figure presented in Chapman, et al., “CVaR-based Safety Analysis for the Infinite Time Setting” 
+Analysis code to generate the figure presented in Wei, Fauss, Chapman, [“CVaR-based Safety Analysis for the Infinite Time Setting”](https://arxiv.org/abs/2108.06776)
+(This is a preprint version)
 
 ## Environment
 It is recommended to run the script on Matlab 2020b. And it is recommended to run the script on a cluster instead of a personal computer. (Running the main file takes more than a week on cedar supercomputer in ComputeCanada)
@@ -63,8 +64,10 @@ One can use `Plot_Infinte_Horizon_Single_Figure(scenarioID,alpha)` to generate a
 
 In order to create a figure containing multiple of figures above, first run `generate_separate_figures.m`, this will generate all .fig files under `staging/figures`. And then run 
 `generate_whole_figure(alpha_vec,N_vec)`, this function will generate a figure containing subplots according to the input entered. 
-For example, if I enter alpha_vec = [0.99 0.05] and N_vec = [200 250 280], the result will be shown as:
-![readme](https://user-images.githubusercontent.com/89077814/130112824-95c408ce-9372-438f-9e74-b25ee099ee7b.jpg)
+For example, if I enter alpha_vec = [0.05 0.0005] and N_vec = [200 250 280], the result will be shown as:
+![paper_example](https://user-images.githubusercontent.com/89077814/130276719-a320153f-c94d-4044-8b15-8620f8efc036.jpg)
+(This is the example used in the paper)
+
 
 ## Defining Your Own Test
 
