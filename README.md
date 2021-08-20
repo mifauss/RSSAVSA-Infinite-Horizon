@@ -43,7 +43,7 @@ The results are stored as .mat files as follows:
 
 ![Animation](https://user-images.githubusercontent.com/89077814/130104997-4a9cb0f8-9eba-4e35-8afa-6866bc29a6db.gif)
 
-Each folder with name between 10 and 30 represents a *s* value, which contains results for different N. Once s value and N is set, a .mat file will store the V_s array, and a log file will be generated to show runtime. These folders will be saved under `ome_directory/staging/`
+Each folder with name between 10 and 30 represents a *s* value, which contains results for different N. Once s value and N is set, a .mat file will store the V_s array, and a log file will be generated to show runtime. These folders will be saved under `home_directory/staging/`
 
 ## Outer Optimization
 
